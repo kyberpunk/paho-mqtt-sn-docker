@@ -1,0 +1,10 @@
+--- MQTTSNGateway/src/MQTTSNGWProcess.cpp.orig
++++ MQTTSNGateway/src/MQTTSNGWProcess.cpp
+@@ -138,6 +138,7 @@ void Process::putLog(const char* format, ...)
+         else
+         {
+             printf("%s", _rbdata);
++            fflush(stdout);
+         }
+     }
+     _mt.unlock();

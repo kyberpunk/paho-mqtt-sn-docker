@@ -1,0 +1,10 @@
+--- MQTTSNGateway/src/MQTTSNGWLogmonitor.cpp.orig
++++ MQTTSNGateway/src/MQTTSNGWLogmonitor.cpp
+@@ -42,6 +42,7 @@ void Logmonitor::run()
+         else
+         {
+             printf("%s", data);
++            fflush(stdout);
+         }
+     }
+ }
