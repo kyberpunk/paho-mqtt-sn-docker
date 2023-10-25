@@ -1,3 +1,5 @@
+#!/bin/sh
+
 function parse_args()
 {
     while [ $# -gt 0 ]
@@ -29,4 +31,3 @@ if ! [ -z ${BROKER_NAME+x} ]; then sed -i 's/^BrokerName.*$/BrokerName='$BROKER_
 if ! [ -z ${BROKER_PORT+x} ]; then sed -i 's/^BrokerPortNo.*$/BrokerPortNo='$BROKER_PORT'/' $PAHO_CONF; fi
 
 /usr/local/sbin/MQTT-SNGateway -f /etc/paho/gateway.conf
-
